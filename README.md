@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Media Player Music
+![](https://img.shields.io/badge/-HTML-orange) ![](https://img.shields.io/badge/-CSS-blue) ![](https://img.shields.io/badge/-JS-yellow)  ![](https://img.shields.io/badge/-Web_Api_Audio-green)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web reproductor de música. [Media Player Music](https://reto01-media-player-music.firebaseapp.com/)
 
-## Available Scripts
+## Características
+Podrás:
+- Reproducir y pausar una canción.
+- Retroceder y avanzar canciones.
+- Silcenciar o  sonorizar canciones.
+- Aumentar y decrementar volumen.
+- De acuerdo a la canción cambia la letra el la parte inferior del reproductor.
 
-In the project directory, you can run:
+## Capturas
+![Screenshot-To-Do-App](https://i.imgur.com/aclLJOz.png)
 
-### `npm start`
+## Tecnologías
+- HTML
+- CSS
+- JavaScript
+- React
+- Fetch y/o Axios 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Run the app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `npm install`: Install dependencies
+- `cp .env.example .env`: Create the environment variables file based on the example template
+- `vim .env`: Specify your GitHub Personal access token ([how to get it](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) -> [your tokens](https://github.com/settings/tokens) -> Enable `Repo.public_repo`)
+- `vim src/devdash_config.ts`: Set the repository URLs you want to show on your *DevDash_*
+- `npm start`: Run in dev mode on [localhost:3000](http://localhost:3000)
+- `npm run build`: Generate production build
 
-### `npm test`
+## ✅ Testing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Unit tests
 
-### `npm run build`
+`npm run test`: Run unit tests with Jest and React Testing Library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### End-to-end tests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `npm start`: Run in dev mode on [localhost:3000](http://localhost:3000)
+- Run end-to-end tests with Cypress choosing one of the following options:
+  - `npm run cy:open`: Open Cypress in dev mode
+  - `npm run cy:run`: Execute Cypress in CLI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔦 Linting
 
-### `npm run eject`
+- `npm run lint`: Run linter
+- `npm run lint:fix`: Fix lint issues
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌈 Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [TypeScript](https://www.typescriptlang.org)
+- [ESLint](https://eslint.org) and [Prettier](https://prettier.io) already configured with the [🤏 Codely's configuration](https://github.com/CodelyTV/eslint-config-codely)
+- [Jest](https://jestjs.io) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for the unit tests
+- [Cypress](https://www.cypress.io) with [Testing Library](https://testing-library.com/docs/cypress-testing-library) for the end-to-end tests
+- [GitHub Action Workflows](https://github.com/features/actions) set up to run tests and linting on push
+- [Makefile](https://github.com/CodelyTV/cra-template-codely/blob/main/template/Makefile) for standardize how to run projects
+- [Sass](https://sass-lang.com) to supercharge CSS with nested classes and more fun
+- [.editorconfig](https://editorconfig.org) for sharing the IDE config
